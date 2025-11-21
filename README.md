@@ -14,7 +14,6 @@
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [Roadmap](#roadmap)
-- [License](#license)
 
 ## 🌟 Overview
 
