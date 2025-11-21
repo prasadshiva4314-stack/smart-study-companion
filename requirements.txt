@@ -1,0 +1,46 @@
+# Core Framework
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-CORS==4.0.0
+
+# AI/ML Libraries
+openai==1.3.0
+langchain==0.1.0
+transformers==4.35.0
+torch==2.1.0
+sentence-transformers==2.2.2
+
+# Database
+SQLAlchemy==2.0.23
+psycopg2-binary==2.9.9
+
+# Authentication
+Flask-Login==0.6.3
+PyJWT==2.8.0
+Werkzeug==3.0.1
+
+# Environment Management
+python-dotenv==1.0.0
+
+# API & Requests
+requests==2.31.0
+
+# Data Processing
+pandas==2.1.3
+numpy==1.26.2
+
+# Text Processing
+spacy==3.7.2
+nltk==3.8.1
+
+# Testing
+pytest==7.4.3
+pytest-flask==1.3.0
+
+# Code Quality
+black==23.11.0
+flake8==6.1.0
+
+# Utilities
+python-dateutil==2.8.2
+click==8.1.7
