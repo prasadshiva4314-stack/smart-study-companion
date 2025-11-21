@@ -3,7 +3,6 @@
 > AI-powered learning assistant that helps students with personalized study recommendations, content summarization, and progress tracking.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-In%20Development-yellow)](https://github.com/prasadshiva4314-stack/smart-study-companion)
 
 ## 📋 Table of Contents
@@ -19,7 +18,7 @@
 
 ## 🌟 Overview
 
-Smart Study Companion is an AI-powered application designed to revolutionize the way students learn. It provides personalized study recommendations, intelligent content summarization, and comprehensive progress tracking to help students achieve their academic goals more efficiently.
+learn. It provides personalized study recommendations, intelligent content summarization, and comprehensive progress tracking to help students achieve their academic goals more efficiently.
 
 ### Why Smart Study Companion?
 
@@ -201,9 +200,6 @@ Contributions are welcome! Here's how you can help:
 - [ ] Integration with educational platforms
 - [ ] Gamification system
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
