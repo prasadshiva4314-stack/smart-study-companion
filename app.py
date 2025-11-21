@@ -9,6 +9,7 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
+from models.summarizer import TextSummarizer
 
 # Load environment variables
 load_dotenv()
@@ -45,12 +46,35 @@ def summarize_text():
     data = request.json
     text = data.get('text', '')
     
-    # TODO: Implement AI summarization
-    return jsonify({
-        'summary': 'Summarization feature coming soon!',
-        'original_length': len(text)
-    })
-
+    
+    if not text or len(text.strip()) == 0:
+        return jsonify({'error': 'Text cannot be empty'}), 400
+    
+    # Get optional parameters
+    max_length = data.get('max_length', 150)
+    summary_type = data.get('summary_type', 'concise')
+    
+    try:
+        # Initialize summarizer
+        summarizer = TextSummarizer()
+        
+        # Perform summarization
+        result = summarizer.summarize(text, max_length=max_length, summary_type=summary_type)
+        
+        return jsonify({
+            'success': True,
+            'summary': result['summary'],
+            'original_length': result['original_length'],
+            'summary_length': result['summary_length'],
+            'compression_ratio': result['compression_ratio'],
+            'word_count': result['word_count']
+        })
+    
+    except ValueError as e:
+        return jsonify({'error': str(e)}), 400
+    except Exception as e:
+        return jsonify({'error': f'Summarization failed: {str(e)}'}), 500
+    
 @app.route('/api/v1/recommendations', methods=['POST'])
 def get_recommendations():
     """Endpoint to get study recommendations"""
